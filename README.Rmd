@@ -1,0 +1,13 @@
+<!-- DO NOT EDIT README.md. It is created by README.Rmd -->
+
+```{r header,echo=FALSE,results='hide'}
+knitr::opts_chunk$set(fig.width = 5.25,
+               fig.height = 3.75,
+               cache = FALSE,
+               dev = 'png')
+```
+
+# ggrittr
+
+```{r child='vignettes/About.Rmd'}
+```

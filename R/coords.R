@@ -1,0 +1,9 @@
+coord_cartesian_p = f_cartesian = function(p, ...) {return(p + coord_cartesian(...))}
+coord_equal_p = f_equal = function(p, ...) {return(p + coord_equal(...))}
+coord_fixed_p = f_fixed = function(p, ...) {return(p + coord_fixed(...))}
+coord_flip_p = f_flip = function(p, ...) {return(p + coord_flip(...))}
+coord_map_p = f_map = function(p, ...) {return(p + coord_map(...))}
+coord_munch_p = f_munch = function(p, ...) {return(p + coord_munch(...))}
+coord_polar_p = f_polar = function(p, ...) {return(p + coord_polar(...))}
+coord_quickmap_p = f_quickmap = function(p, ...) {return(p + coord_quickmap(...))}
+coord_trans_p = f_trans = function(p, ...) {return(p + coord_trans(...))}

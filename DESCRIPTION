@@ -1,0 +1,14 @@
+Package: ggrittr
+Title: Extending ggplot2 to work with magrittr pipes
+Version: 0.0.0.9000
+Authors@R: person("Darrin", "Homme", email = "darrin.homme@gmail.com", role = c("aut", "cre"))
+Description: Offers proxy functions in place of each ggplot layer to pass along the plot
+Depends: R (>= 3.3.1)
+License: MIT License
+LazyData: true
+Depends: ggplot2 (>= 2.2)
+Imports:
+    magrittr
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
