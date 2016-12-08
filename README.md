@@ -1,9 +1,3 @@
----
-output: 
-  html_document: 
-    keep_md: yes
-    self_contained: yes
----
 <!-- DO NOT EDIT README.md. It is created by README.Rmd -->
 
 
