@@ -1,6 +1,7 @@
 ## This is a function to create the functions for the package and keep updated as ggplot changes
 ## Do not run
 BuildAllFunctions = function() {
+  library(ggplot2)
   cat("" , file = "R/geoms.R", sep = "", fill = FALSE, labels = NULL, append = FALSE)
   for(i in lsf.str("package:ggplot2")) {
     if(substr(i, 1, 5) == "geom_") {
@@ -36,7 +37,7 @@ BuildAllFunctions = function() {
       cat(paste0("theme_", stem, "_p = t_", stem, " = function(p, ...) {return(p + ", i, "(...))}\n") , file = "R/themes.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
     }
   }
-  cat(paste0("theme_p = function(p, ...) {return(p + geom_blank(...))}\n") , file = "R/themes.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
+  cat(paste0("theme_p = function(p, ...) {return(p + theme(...))}\n") , file = "R/themes.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
   
   
   cat("" , file = "R/facets.R", sep = "", fill = FALSE, labels = NULL, append = FALSE)
@@ -59,7 +60,6 @@ BuildAllFunctions = function() {
   
   cat("" , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = FALSE)
   cat(paste0("guides_p = function(p, ...) {return(p + guides(...))}\n") , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
-  cat(paste0("labs_p = function(p, ...) {return(p + labs(...))}\n") , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
   cat(paste0("labs_p = function(p, ...) {return(p + labs(...))}\n") , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
   cat(paste0("ggtitle_p = function(p, ...) {return(p + ggtitle(...))}\n") , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)
   cat(paste0("xlab_p = function(p, ...) {return(p + xlab(...))}\n") , file = "R/additional.R", sep = "", fill = FALSE, labels = NULL, append = TRUE)

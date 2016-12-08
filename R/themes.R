@@ -11,4 +11,4 @@ theme_replace_p = t_replace = function(p, ...) {return(p + theme_replace(...))}
 theme_set_p = t_set = function(p, ...) {return(p + theme_set(...))}
 theme_update_p = t_update = function(p, ...) {return(p + theme_update(...))}
 theme_void_p = t_void = function(p, ...) {return(p + theme_void(...))}
-theme_p = function(p, ...) {return(p + geom_blank(...))}
+theme_p = function(p, ...) {return(p + theme(...))}

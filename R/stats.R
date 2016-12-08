@@ -1,8 +1,8 @@
 stat_bin_p = s_bin = function(p, ...) {return(p + stat_bin(...))}
 stat_bin2d_p = s_bin2d = function(p, ...) {return(p + stat_bin2d(...))}
 stat_bin_2d_p = s_bin_2d = function(p, ...) {return(p + stat_bin_2d(...))}
-stat_bin_hex_p = s_bin_hex = function(p, ...) {return(p + stat_bin_hex(...))}
 stat_binhex_p = s_binhex = function(p, ...) {return(p + stat_binhex(...))}
+stat_bin_hex_p = s_bin_hex = function(p, ...) {return(p + stat_bin_hex(...))}
 stat_boxplot_p = s_boxplot = function(p, ...) {return(p + stat_boxplot(...))}
 stat_contour_p = s_contour = function(p, ...) {return(p + stat_contour(...))}
 stat_count_p = s_count = function(p, ...) {return(p + stat_count(...))}
