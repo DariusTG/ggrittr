@@ -1,25 +1,30 @@
 ---
-title: "About ggrittr"
-author: "Darrin Homme"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{About ggrittr}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: 
+  html_document: 
+    keep_md: yes
+    self_contained: yes
 ---
+<!-- DO NOT EDIT README.md. It is created by README.Rmd -->
+
+
+
+# ggrittr
+
+
 
 The ggrittr package is intended to provide a proxy for each layer of the ggplot to enable magrittr piping of each layer. Often when you are working back and forth between data and visualization, it is easy to substitute the pipes for plusses and vice-versa. 
 
 ## Installing ggrittr
 
-```{r, eval=FALSE, fig.show='hold', message=FALSE, warning=FALSE, echo=TRUE}
+
+```r
 devtools::install_git("https://github.com/DariusTG/ggrittr.git")
 ```
 
 ## Using ggrittr
 Here is an example using ggplot man page examples (with some modification)
-```{r pipe_example_1, echo=TRUE, fig.show='hold', message=FALSE, warning=FALSE}
+
+```r
 library(magrittr)
 library(ggplot2)
 library(ggrittr)
@@ -41,7 +46,10 @@ ggplot(df, aes(gp, y)) %>%
   theme_bw_p()
 ```
 
-```{r pipe_example_2, echo=TRUE, fig.show='hold', message=FALSE, warning=FALSE}
+![plot of chunk pipe_example_1](figure/pipe_example_1-1.png)
+
+
+```r
 # Same plot as above, declaring only the data frame in ggplot().
 # Note how the x and y aesthetics must now be declared in
 # each geom_point() layer.
@@ -51,7 +59,10 @@ ggplot(df) %>%
   theme_dark_p()
 ```
 
-```{r pipe_example_3, echo=TRUE, fig.show='hold', message=FALSE, warning=FALSE}
+![plot of chunk pipe_example_2](figure/pipe_example_2-1.png)
+
+
+```r
 # Alternatively we can fully specify the plot in each layer. This
 # is not useful here, but can be more clear when working with complex
 # mult-dataset graphics
@@ -65,6 +76,7 @@ ggplot() %>%
     width = 0.4
   ) %>%
   theme_linedraw_p()
-
 ```
+
+![plot of chunk pipe_example_3](figure/pipe_example_3-1.png)
 
